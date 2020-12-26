@@ -1,0 +1,101 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+ /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
+    background-color: #f2f6fc;
+    font-family: 'Roboto', sans-serif;
+
+
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+header {
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  //height: 90px;
+  background-color: #fff;
+  border: 2px solid #e8e8e8;
+  float: left;
+  //padding: 27px 0px;
+  margin-bottom: 5vh;
+
+}
+
+main {
+  //flex: 1;
+  display: flex;
+}
+
+#sidebar {
+  flex: 0.2 1;
+  margin-right: 35px;
+
+  section {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-header {
+    padding: 10px 13px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #484848;
+    border-bottom: 2px solid #f5f5f5;
+  }
+
+  section.new-hot-deal {
+    button {
+      width: 100%;
+    }
+  }
+
+  section.categories {
+    background-color: #fff;
+    box-shadow: 0 1px 10px 0 rgba(151,158,181,.28);
+    border-radius: 6px;
+    ul {
+      margin: 0;
+      padding: 0;
+  
+      li {
+        list-style: none;
+        a {
+          display: block;
+          padding: 6px 0px;
+          span.icon {
+            img {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+#content {
+  flex: 1;
+}
