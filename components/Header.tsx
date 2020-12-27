@@ -1,12 +1,23 @@
-import React from 'react';
-import { Nav, Navbar, NavDropdown, Form, FormControl, Container, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Nav, Navbar, Form, FormControl, Container, Button } from 'react-bootstrap';
+import LoginModal from './LoginModal';
 
 
 
 interface IProps { }
 //https://startbootstrap.com/theme/freelancer
 //https://yazilimtoplulugu.com/
+//https://litmotion.net/demo/neori/
 const Header = (props: IProps): React.ReactElement => {
+
+  const [loginModalShow, setLoginModalShow] = useState(false);
+
+  const handleClose = () => setLoginModalShow(false);
+  const handleOpen = () => setLoginModalShow(true);
+  
+
+ 
+  
   return (
     <header>
       <Navbar bg="light" expand="lg" className="header">
@@ -16,21 +27,22 @@ const Header = (props: IProps): React.ReactElement => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#home">Ana Sayfa</Nav.Link>
-              <Nav.Link href="#link">Test Link</Nav.Link>
-              <NavDropdown title="İletişim" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Test</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="#link">En Sıcaklar</Nav.Link>
+              <Nav.Link href="#link">En Beğenilenler</Nav.Link>
+              <Nav.Link href="#link">İletişim</Nav.Link>
             </Nav>
             <Form inline>
               <FormControl type="text" placeholder="Ara.." className="mr-sm-2" />
             </Form>
-            <Button variant="outline-info" className="mr-1">Giriş Yap</Button>
+            <Button variant="outline-info" className="mr-1" onClick={handleOpen}>Giriş Yap</Button>
             <Button variant="outline-success">Kayıt Ol</Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      
+      <LoginModal show={loginModalShow} handleClose={handleClose} />
+
     </header>
   );
 }
