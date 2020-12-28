@@ -18,6 +18,14 @@ const Sidebar = (props: IProps): React.ReactElement => {
                     <ul>
                         <li><a href="#" title="Bilgisayar"><span className="icon"><img src="categories/desktop.svg" alt="Bilgisayar" /></span>Bilgisayar</a></li>
                         <li><a href="#" title="Elektronik"><span className="icon"><img src="categories/electronic.svg" alt="Elektronik" /></span>Elektronik</a></li>
+                        <li><a href="#" title="Bilgisayar"><span className="icon"><img src="categories/desktop.svg" alt="Bilgisayar" /></span>Bilgisayar</a></li>
+                        <li><a href="#" title="Elektronik"><span className="icon"><img src="categories/electronic.svg" alt="Elektronik" /></span>Elektronik</a></li>
+                        <li><a href="#" title="Bilgisayar"><span className="icon"><img src="categories/desktop.svg" alt="Bilgisayar" /></span>Bilgisayar</a></li>
+                        <li><a href="#" title="Elektronik"><span className="icon"><img src="categories/electronic.svg" alt="Elektronik" /></span>Elektronik</a></li>
+                        <li><a href="#" title="Bilgisayar"><span className="icon"><img src="categories/desktop.svg" alt="Bilgisayar" /></span>Bilgisayar</a></li>
+                        <li><a href="#" title="Elektronik"><span className="icon"><img src="categories/electronic.svg" alt="Elektronik" /></span>Elektronik</a></li>
+                        <li><a href="#" title="Bilgisayar"><span className="icon"><img src="categories/desktop.svg" alt="Bilgisayar" /></span>Bilgisayar</a></li>
+                        <li><a href="#" title="Elektronik"><span className="icon"><img src="categories/electronic.svg" alt="Elektronik" /></span>Elektronik</a></li>
                     </ul>
                 </div>
                 

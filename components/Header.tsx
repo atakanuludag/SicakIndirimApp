@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import { Nav, Navbar, Form, FormControl, Container, Button } from 'react-bootstrap';
+import { Nav, Navbar, Form, FormControl, Container, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import LoginModal from './LoginModal';
+import RegisterModal from './RegisterModal';
 
-
-
-interface IProps { }
+interface IHeaderProps { }
 //https://startbootstrap.com/theme/freelancer
 //https://yazilimtoplulugu.com/
 //https://litmotion.net/demo/neori/
-const Header = (props: IProps): React.ReactElement => {
+const Header = (props: IHeaderProps): React.ReactElement => {
 
   const [loginModalShow, setLoginModalShow] = useState(false);
+  const [registerModalShow, setRegisterModalShow] = useState(false);
 
-  const handleClose = () => setLoginModalShow(false);
-  const handleOpen = () => setLoginModalShow(true);
-  
+  const handleLoginModalClose = () => setLoginModalShow(false);
+  const handleLoginModalOpen = () => setLoginModalShow(true);
 
- 
-  
+  const handleRegisterModalClose = () => setRegisterModalShow(false);
+  const handleRegisterModalOpen = () => setRegisterModalShow(true);
+
   return (
     <header>
       <Navbar bg="light" expand="lg" className="header">
@@ -32,16 +32,27 @@ const Header = (props: IProps): React.ReactElement => {
               <Nav.Link href="#link">İletişim</Nav.Link>
             </Nav>
             <Form inline>
-              <FormControl type="text" placeholder="Ara.." className="mr-sm-2" />
+              <OverlayTrigger
+                placement="bottom"
+                overlay={
+                  <Tooltip id={`search-tooltip`}>İstediğiniz kelimeyi yazdıktan sonra Enter tuşuna basınız.</Tooltip>
+                }>
+                <FormControl type="text" placeholder="Ara.." className="mr-sm-2" />
+              </OverlayTrigger>
             </Form>
-            <Button variant="outline-info" className="mr-1" onClick={handleOpen}>Giriş Yap</Button>
-            <Button variant="outline-success">Kayıt Ol</Button>
+            <Button variant="outline-info" className="mr-1" onClick={handleLoginModalOpen}>Giriş Yap</Button>
+            <Button variant="outline-success" className="mr-1" onClick={handleRegisterModalOpen}>Kayıt Ol</Button>
+            
+
+            {/* Buraya dark mode switch eklenecek. */ }
+
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      
-      <LoginModal show={loginModalShow} handleClose={handleClose} />
+
+      <LoginModal show={loginModalShow} handleClose={handleLoginModalClose} />
+      <RegisterModal show={registerModalShow} handleClose={handleRegisterModalClose} />
 
     </header>
   );

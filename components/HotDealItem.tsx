@@ -13,15 +13,17 @@ const HotDealItem = (props: IProps): React.ReactElement => {
             <Card.Body>
                 <Card.Title><Card.Link href="#">{props.title}</Card.Link></Card.Title>
                 <Card.Text>{props.description}</Card.Text>
+                <i className="fas fa-burn"></i>
             </Card.Body>
             <Card.Footer className="text-muted">
                 <Row>
-                    <Col>
+                    <Col className="created-user">
                         <Image src="http://via.placeholder.com/30" roundedCircle />
                         <Card.Link href="#">@atakanuludag</Card.Link>
                     </Col>
-                    <Col><i className="bi bi-clock"></i> 2 gün önce</Col>
-                    <Col md={{ offset: 5 }}></Col>
+                    <Col className="category"><Card.Link href="#"><span className="icon"><Image src="categories/desktop.svg" /></span>Bilgisayar</Card.Link></Col>
+                    <Col className="date"><i className="bi bi-clock"></i> 2 gün önce</Col>
+
                 </Row>
 
                 
