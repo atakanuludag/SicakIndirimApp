@@ -8,10 +8,10 @@ interface ILayout {
   children: React.ReactNode;
 }
 
-const Layout = (props: ILayout): React.ReactElement => {
+const SidebarLayout = (props: ILayout): React.ReactElement => {
   const { children } = props;
   return (
-    <React.StrictMode>
+    <React.Fragment>
       <NextHeader />
       <Header />
 
@@ -23,7 +23,7 @@ const Layout = (props: ILayout): React.ReactElement => {
           </Row>
         </main>
       </Container>
-    </React.StrictMode>
+    </React.Fragment>
   );
 }
-export default Layout;
+export default SidebarLayout;

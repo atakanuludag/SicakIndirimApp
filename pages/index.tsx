@@ -1,7 +1,10 @@
 import React from 'react';
 import HotDealItem from '../components/HotDealItem';
+import SidebarLayout from '../components/SidebarLayout';
 
-export default function Home() {
+type HomeComponent = React.FC & { layout: typeof SidebarLayout }
+
+const Home: HomeComponent = () => {
   
   return (
     <React.Fragment>
@@ -12,3 +15,6 @@ export default function Home() {
     </React.Fragment>
   )
 }
+
+Home.layout = SidebarLayout;
+export default Home;

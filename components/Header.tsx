@@ -40,8 +40,8 @@ const Header = (props: IHeaderProps): React.ReactElement => {
                 <FormControl type="text" placeholder="Ara.." className="mr-sm-2" />
               </OverlayTrigger>
             </Form>
-            <Button variant="outline-info" className="mr-1" onClick={handleLoginModalOpen}>Giriş Yap</Button>
-            <Button variant="outline-success" className="mr-1" onClick={handleRegisterModalOpen}>Kayıt Ol</Button>
+            <Button variant="outline-secondary" className="mr-1" onClick={handleLoginModalOpen}>Giriş Yap</Button>
+            <Button variant="outline-secondary" className="mr-1" onClick={handleRegisterModalOpen}>Kayıt Ol</Button>
             
 
             {/* Buraya dark mode switch eklenecek. */ }
