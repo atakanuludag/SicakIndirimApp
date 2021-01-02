@@ -1,7 +1,6 @@
 import React from 'react';
-import NextHeader from './NextHeader';
-import Header from './Header';
-import Sidebar from './Sidebar';
+import NextHeader from '../components/NextHeader';
+import Header from '../components/Header';
 import { Container, Row, Col } from 'react-bootstrap';
 
 interface ILayout {

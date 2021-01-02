@@ -31,7 +31,7 @@ const Header = (props: IHeaderProps): React.ReactElement => {
               <Nav.Link href="#link">En Beğenilenler</Nav.Link>
               <Nav.Link href="#link">İletişim</Nav.Link>
             </Nav>
-            <Form inline>
+            <Form inline className="search">
               <OverlayTrigger
                 placement="bottom"
                 overlay={

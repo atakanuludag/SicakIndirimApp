@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Row, Col, Card, Image } from 'react-bootstrap';
+import { Row, Col, Card, Image } from 'react-bootstrap';
 
 interface IProps {
    title: string;
@@ -19,14 +19,15 @@ const HotDealItem = (props: IProps): React.ReactElement => {
             </Card.Body>
             <Card.Footer className="text-muted">
                 <Row>
-                    <Col className="created-user">
+                    <Col md={4} xs={12} className="created-user">
                         <Image src="http://via.placeholder.com/30" roundedCircle />
                         <Card.Link href="#">@atakanuludag</Card.Link>
                     </Col>
-                    <Col className="category"><Card.Link href="#"><span className="icon"><Image src="categories/desktop.svg" /></span>Bilgisayar</Card.Link></Col>
-                    <Col className="date"><i className="bi bi-clock"></i> 2 gün önce</Col>
-                    <Col xs={2} className="comments"><i className="far fa-comments"></i> 10 yorum</Col>
-                    <Col xs={2} className="hot"><img src="fire.svg" /> 50 kişi</Col>
+
+                    <Col md={2} xs={12} className="category"><Card.Link href="#"><span className="icon"><Image src="categories/desktop.svg" /></span>Bilgisayar</Card.Link></Col>
+                    <Col md={2} xs={12} className="date"><i className="bi bi-clock"></i> 2 gün önce</Col>
+                    <Col md={2} xs={12} className="comments"><i className="far fa-comments"></i> 10 yorum</Col>
+                    <Col md={2} xs={12} className="hot"><img src="fire.svg" /> 50 kişi</Col>
                 
 
                 </Row>

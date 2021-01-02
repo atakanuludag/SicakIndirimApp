@@ -140,6 +140,12 @@ main {
 }
 
 
+.hot-deal-detail {
+  h1 {
+    font-size: 24px;
+  }
+}
+
 
 
 
@@ -149,10 +155,29 @@ main {
       .fire-icon {
         width: 10px;
         position: absolute;
-        left: -23px;
+        left: -20px;
         top: -12px;
         transform: rotate(25deg);
       }
     }
   }
+
+  .header {
+    text-align: center;
+    .search {
+      padding: 10px;
+    }
+  }
+
+  .hot-deal-item {
+    .card-footer {
+      .row {
+        > div {
+          padding: 5px 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
 }

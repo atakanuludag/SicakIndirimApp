@@ -4,10 +4,14 @@ import HotDealItem from '../components/HotDealItem';
 export default function Home() {
   
   return (
-    <React.Fragment>
+    <div className="hot-deal-detail">
 
-      <h1>test</h1>
+      <h1>2629 TL LG 27'' 27UL550-W IPS 4K HDR 10 RADEON FreeSync™ HDMI DP Beyaz LED Monitör</h1>
 
-    </React.Fragment>
+      <span className="description">
+        Bu monitör, yüksek dinamik aralık içeriklerin parlak ve karanlık kısımlardaki detayları göstermek için HDR10 ile uyumludur.
+      </span>
+
+    </div>
   )
 }

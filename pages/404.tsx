@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, FormControl, Button, Row, Col } from 'react-bootstrap';
-import FullLayout from '../components/FullLayout';
+import FullLayout from '../layouts/FullLayout';
 
 type NotFoundComponent = React.FC & { layout: typeof FullLayout }
 

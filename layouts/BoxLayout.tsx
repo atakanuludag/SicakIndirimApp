@@ -1,14 +1,14 @@
 import React from 'react';
-import NextHeader from './NextHeader';
-import Header from './Header';
-import Sidebar from './Sidebar';
+import NextHeader from '../components/NextHeader';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
 import { Container, Row, Col } from 'react-bootstrap';
 
 interface ILayout {
   children: React.ReactNode;
 }
 
-const SidebarLayout = (props: ILayout): React.ReactElement => {
+const BoxLayout = (props: ILayout): React.ReactElement => {
   const { children } = props;
   return (
     <React.Fragment>
@@ -19,11 +19,11 @@ const SidebarLayout = (props: ILayout): React.ReactElement => {
         <main>
           <Row>
             <Col lg={3} xs={12}><aside id="sidebar"><Sidebar /></aside></Col>
-            <Col lg={9} xs={12}><section id="content">{children}</section></Col>
+            <Col lg={9} xs={12}><section id="content" className="box box-padding">{children}</section></Col>
           </Row>
         </main>
       </Container>
     </React.Fragment>
   );
 }
-export default SidebarLayout;
+export default BoxLayout;
